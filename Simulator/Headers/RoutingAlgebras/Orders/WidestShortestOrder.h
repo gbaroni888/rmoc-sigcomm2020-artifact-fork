@@ -16,7 +16,8 @@ namespace RoutingAlgebras
 			const std::pair < int, int > & l, 
 			const std::pair < int, int > & r ) 
 		{
-			if( ( l.second < r.second ) or ( l.second == r.second and l.first > r.first ) )
+			//if( ( l.second < r.second ) or ( l.second == r.second and l.first > r.first ) )
+			if( l.second < r.second )
 			{	return true;	}
 			else
 			{	return false;	}

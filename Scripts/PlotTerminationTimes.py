@@ -29,17 +29,17 @@ def PlotTerminationTimes( AS, Metric, WhichOrder, Event ):
     if ( WhichOrder == "WidthLengthsOrders" ):
     
         Orders  =   [   "WidthLength/WidestShortestOrder"               , 
-                        "WidthLength/ShortestWidestOrder"               , 
-                        "WidthLength/ProductOrderWidthLengths"          ]   
+                        "WidthLength/ShortestWidestOrder"               ] 
+                    #    "WidthLength/ProductOrderWidthLengths"          ]   
 
         Color   =   {   0 : 'lime'                                      ,
-                        1 : 'darkviolet'                                ,
-                        2 : 'green'                                     }
+                        1 : 'darkviolet'                                }
+                     #   2 : 'green'                                     }
 
                                     
-        Label   =   {   0 : 'Widest-shortest \n order              '    ,
-                        1 : 'Shortest-widest \n order              '    ,
-                        2 : 'Product order on \n width-lengths '        }
+        Label   =   {   0 : 'Shortest \n order              '    ,
+                        1 : 'Widest \n order              '    }
+                    #    2 : 'Product order on \n width-lengths '        }
 
     labels = []
 
@@ -113,3 +113,4 @@ PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengths
 PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Failure"         )
 PlotTerminationTimes( "AS3967", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
                         
+        

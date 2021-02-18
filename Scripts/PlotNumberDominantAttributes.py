@@ -12,20 +12,28 @@ def PlotNumberDominantAttributes( AS, WhichOrders ):
 
     if( WhichOrders == "All" ):
         
-        Orders  =  [    "HopsLength/ProductOrderHopsLengths"            , 
-                        "WidthHops/ProductOrderWidthHops"               ,            
-                        "WidthLength/ProductOrderWidthLengths"          , 
-                        "WidthHopsLength/ProductOrderWidthHopsLengths"  ]
+        Orders  =  [    #"HopsLength/ProductOrderHopsLengths"            , 
+                        #"WidthHops/ProductOrderWidthHops"               ,            
+                        #"WidthLength/ProductOrderWidthLengths"          , 
+                        #"WidthHopsLength/ProductOrderWidthHopsLengths"  ,
+                        "WidthLength/WidestShortestOrder"          ,
+                        "WidthLength/ShortestWidestOrder"          ]
 
         Color   =   {   0 : 'black'                                     ,
-                        1 : 'red'                                       ,
-                        2 : 'green'                                     ,
-                        3 : 'blue'                                      }
+                        1 : 'red'                                       }
+                    #    2 : 'green'                                     ,
+                    #    3 : 'blue' ,
+                     #   4 : 'orange' ,
+                     #   5 : 'purple'                                      }
 
-        Label   =   {   0 : 'Hops-lengths   '                           ,
-                        1 : 'Width-hops      '                          ,
-                        2 : 'Width-lengths  '                           ,
-                        3 : 'Width-hops- \n lengths           '         }   
+        Label   =   {  # 0 : 'Hops-lengths   '                           ,
+                       # 1 : 'Width-hops      '                          ,
+                       # 2 : 'Width-lengths  '                           ,
+                       # 3 : 'Width-hops- \n lengths           '  ,
+                        #4 : 'Widest-shortest \n order         '  ,
+                        #5 : 'Shortest-widest \n order         '         }
+                        0 : 'Shortest order' ,
+                        1 : 'Widest order' }   
 
     x       = []
     y       = []
@@ -61,8 +69,10 @@ def PlotNumberDominantAttributes( AS, WhichOrders ):
 
     plt.bar( x[0] - 0.375 , y[0], width = 0.2, color = Color[0] )
     plt.bar( x[1] - 0.125 , y[1], width = 0.2, color = Color[1] )
-    plt.bar( x[2] + 0.125 , y[2], width = 0.2, color = Color[2] )
-    plt.bar( x[3] + 0.375 , y[3], width = 0.2, color = Color[3] )
+   # plt.bar( x[2] + 0.125 , y[2], width = 0.2, color = Color[2] )
+   # plt.bar( x[3] + 0.375 , y[3], width = 0.2, color = Color[3] )
+   # plt.bar( x[4] + 0.375 , y[4], width = 0.2, color = Color[4] )
+   # plt.bar( x[5] + 0.375 , y[5], width = 0.2, color = Color[5] )
 
     plt.legend( labels,                                 fontsize  = 12 , handlelength = 0.85 )
 
