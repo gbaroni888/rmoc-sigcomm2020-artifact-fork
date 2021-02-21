@@ -29,17 +29,17 @@ def PlotTerminationTimes( AS, Metric, WhichOrder, Event ):
     if ( WhichOrder == "WidthLengthsOrders" ):
     
         Orders  =   [   "WidthLength/WidestShortestOrder"               , 
-                        "WidthLength/ShortestWidestOrder"               ] 
-                    #    "WidthLength/ProductOrderWidthLengths"          ]   
+                        "WidthLength/ShortestWidestOrder"               , 
+                        "WidthLength/ProductOrderWidthLengths"          ]   
 
         Color   =   {   0 : 'lime'                                      ,
-                        1 : 'darkviolet'                                }
-                     #   2 : 'green'                                     }
+                        1 : 'darkviolet'                                ,
+                        2 : 'green'                                     }
 
                                     
-        Label   =   {   0 : 'Shortest \n order              '    ,
-                        1 : 'Widest \n order              '    }
-                    #    2 : 'Product order on \n width-lengths '        }
+        Label   =   {   0 : 'Widest-shortest \n order              '    ,
+                        1 : 'Shortest-widest \n order              '    ,
+                        2 : 'Product order on \n width-lengths '        }
 
     labels = []
 
@@ -107,10 +107,10 @@ print ( " \n--- Plotting the Distributions of Termination Times --------\n " )
 
 ## Change to "AS1239" to obtains the plots presented in Section 6
 
-#PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Announcement"    )
-#PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Failure"         )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Announcement"    )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Failure"         )
 PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Announcement"    )
 PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Failure"         )
-#PlotTerminationTimes( "AS3967", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
+PlotTerminationTimes( "AS3967", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
                         
         

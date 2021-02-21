@@ -69,7 +69,6 @@ namespace DominantPathsProtocols
 							int hops2 = item2->second;
 
 							if( ( ord( cand2, cand1 ) ) or ( cand2 == cand1 and hops2 < hops1 ) )
-							//if( ord(cand2, cand1))
 							{
 								isDominant = false;
 								goto EndTest;
