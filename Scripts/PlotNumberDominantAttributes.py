@@ -17,10 +17,10 @@ def PlotNumberDominantAttributes( AS, WhichOrders ):
                         "WidthLength/ProductOrderWidthLengths"          , 
                         "WidthHopsLength/ProductOrderWidthHopsLengths"  ]
 
-        Color   =   {   0 : 'black'                                     ,
-                        1 : 'red'                                       ,
-                        2 : 'green'                                     ,
-                        3 : 'blue'                                      }
+        Color   =   {   0 : 'pink'                                     ,
+                        1 : 'orange'                                       ,
+                        2 : 'purple'                                     ,
+                        3 : 'gray'                                      }
 
         Label   =   {   0 : 'Hops-lengths   '                           ,
                         1 : 'Width-hops      '                          ,
@@ -90,4 +90,5 @@ print ( " \n--- Plotting the Distribution of Number of Dominant Attributes \n " 
 
 ## Change to "AS1239" to obtains the plots presented in Section 6
 
-PlotNumberDominantAttributes( "AS3967", "All" )
+#PlotNumberDominantAttributes( "AS3967", "All" )
+PlotNumberDominantAttributes( "AS1239", "All" )
