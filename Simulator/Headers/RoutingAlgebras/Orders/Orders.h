@@ -5,6 +5,7 @@
 
 #include "RoutingAlgebras/Orders/ShortestWidestOrder.h"
 #include "RoutingAlgebras/Orders/WidestShortestOrder.h"
+#include "RoutingAlgebras/Orders/WidestLeastHopsOrder.h"
 #include "RoutingAlgebras/Orders/ProductOrderWidthLengths.h"
 #include "RoutingAlgebras/Orders/ProductOrderWidthHops.h"
 #include "RoutingAlgebras/Orders/ProductOrderHopsLengths.h"

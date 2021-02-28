@@ -15,17 +15,20 @@ def PlotNumberDominantAttributes( AS, WhichOrders ):
         Orders  =  [    "HopsLength/ProductOrderHopsLengths"            , 
                         "WidthHops/ProductOrderWidthHops"               ,            
                         "WidthLength/ProductOrderWidthLengths"          , 
-                        "WidthHopsLength/ProductOrderWidthHopsLengths"  ]
+                        "WidthHopsLength/ProductOrderWidthHopsLengths"  ,
+                        "WidthHops/WidestLeastHopsOrder"                ]
 
-        Color   =   {   0 : 'pink'                                     ,
-                        1 : 'orange'                                       ,
-                        2 : 'purple'                                     ,
-                        3 : 'gray'                                      }
+        Color   =   {   0 : 'black'                                      ,
+                        1 : 'red'                                    ,
+                        2 : 'green'                                    ,
+                        3 : 'blue'                                      ,
+                        4 : 'orange'                                       }
 
         Label   =   {   0 : 'Hops-lengths   '                           ,
                         1 : 'Width-hops      '                          ,
                         2 : 'Width-lengths  '                           ,
-                        3 : 'Width-hops- \n lengths           '         }
+                        3 : 'Width-hops- \n lengths           '         ,
+                        4 : 'Widest-least- \n hops            '         }
 
     x       = []
     y       = []
@@ -63,6 +66,7 @@ def PlotNumberDominantAttributes( AS, WhichOrders ):
     plt.bar( x[1] - 0.125 , y[1], width = 0.2, color = Color[1] )
     plt.bar( x[2] + 0.125 , y[2], width = 0.2, color = Color[2] )
     plt.bar( x[3] + 0.375 , y[3], width = 0.2, color = Color[3] )
+    plt.bar( x[4] + 0.375 , y[4], width = 0.2, color = Color[4] )
 
     plt.legend( labels,                                 fontsize  = 12 , handlelength = 0.85 )
 
@@ -90,5 +94,5 @@ print ( " \n--- Plotting the Distribution of Number of Dominant Attributes \n " 
 
 ## Change to "AS1239" to obtains the plots presented in Section 6
 
-#PlotNumberDominantAttributes( "AS3967", "All" )
-PlotNumberDominantAttributes( "AS1239", "All" )
+PlotNumberDominantAttributes( "AS3967", "All" )
+#PlotNumberDominantAttributes( "AS1239", "All" )

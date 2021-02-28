@@ -228,6 +228,9 @@ int main( int argc, char *argv[] )
 	else if( fOrder.compare( "WidestShortestOrder"  			)  == 0 )
 	{	RunnerSimulateNonRestartingProtocol < std::pair < int, int >, WSO,  WL > ( fNetwork, fOrder, fTrails );	
 	}
+	else if( fOrder.compare( "WidestLeastHopsOrder"  			)  == 0 )
+	{	RunnerSimulateNonRestartingProtocol < std::pair < int, int >, WLHO,  WH > ( fNetwork, fOrder, fTrails );	
+	}
 	else if( fOrder.compare( "ProductOrderHopsLengths" 			) == 0 )
 	{	RunnerSimulateNonRestartingProtocol < std::pair < int, int >, POHL, HL > ( fNetwork, fOrder, fTrails );	
 	}

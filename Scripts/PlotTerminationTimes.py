@@ -16,10 +16,10 @@ def PlotTerminationTimes( AS, Metric, WhichOrder, Event ):
                         "WidthLength/ProductOrderWidthLengths"          , 
                         "WidthHopsLength/ProductOrderWidthHopsLengths"  ]
 
-        Color   =   {   0 : 'pink'                                     ,
-                        1 : 'orange'                                       ,
-                        2 : 'purple'                                     ,
-                        3 : 'gray'                                      }
+        Color   =   {   0 : 'black'                                     ,
+                        1 : 'red'                                       ,
+                        2 : 'green'                                     ,
+                        3 : 'blue'                                      }
 
         Label   =   {   0 : 'Hops-lengths   '                           ,
                         1 : 'Width-hops      '                          ,
@@ -32,14 +32,26 @@ def PlotTerminationTimes( AS, Metric, WhichOrder, Event ):
                         "WidthLength/ShortestWidestOrder"               , 
                         "WidthLength/ProductOrderWidthLengths"          ]   
 
-        Color   =   {   0 : 'blue'                                      ,
-                        1 : 'yellow'                                ,
-                        2 : 'brown'                                     }
+        Color   =   {   0 : 'lime'                                      ,
+                        1 : 'darkviolet'                                ,
+                        2 : 'green'                                     }
 
                                     
         Label   =   {   0 : 'Widest-shortest \n order              '    ,
                         1 : 'Shortest-widest \n order              '    ,
                         2 : 'Product order on \n width-lengths '        }
+
+    if ( WhichOrder == "WidthHopsOrders" ):
+    
+        Orders  =   [   "WidthHops/WidestLeastHopsOrder"                ,
+                        "WidthHops/ProductOrderWidthHops"          ]   
+
+        Color   =   {   0 : 'blue'                                      ,
+                        1 : 'darkviolet'                                }
+
+                                    
+        Label   =   {   0 : 'Widest-least-hops \n order              '  ,
+                        1 : 'Product order on \n width-hops '        }
 
     labels = []
 
@@ -107,15 +119,17 @@ print ( " \n--- Plotting the Distributions of Termination Times --------\n " )
 
 ## Change to "AS1239" to obtains the plots presented in Section 6
 
-#PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Announcement"    )
-#PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Failure"         )
-#PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Announcement"    )
-#PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Failure"         )
-#PlotTerminationTimes( "AS3967", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
-PlotTerminationTimes( "AS1239", "Termination_Times",               "All",                  "Announcement"    )
-PlotTerminationTimes( "AS1239", "Termination_Times",               "All",                  "Failure"         )
-PlotTerminationTimes( "AS1239", "Termination_Times",               "WidthLengthsOrders",   "Announcement"    )
-PlotTerminationTimes( "AS1239", "Termination_Times",               "WidthLengthsOrders",   "Failure"         )
-PlotTerminationTimes( "AS1239", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Announcement"    )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "All",                  "Failure"         )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Announcement"    )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthLengthsOrders",   "Failure"         )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthHopsOrders",      "Announcement"    )
+PlotTerminationTimes( "AS3967", "Termination_Times",               "WidthHopsOrders",      "Failure"         )
+PlotTerminationTimes( "AS3967", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
+#PlotTerminationTimes( "AS1239", "Termination_Times",               "All",                  "Announcement"    )
+#PlotTerminationTimes( "AS1239", "Termination_Times",               "All",                  "Failure"         )
+#PlotTerminationTimes( "AS1239", "Termination_Times",               "WidthLengthsOrders",   "Announcement"    )
+#PlotTerminationTimes( "AS1239", "Termination_Times",               "WidthLengthsOrders",   "Failure"         )
+#PlotTerminationTimes( "AS1239", "Times_Propagate_Unreachability",  "All",                  "Failure"         )
                         
         

@@ -23,6 +23,11 @@ namespace DominantPathsProtocols
 			RoutingState 	< std::pair < int, int > > 			&,
 			std::vector 	< std::mt19937 > 					& );
 
+		template double RoutingSimulator < std::pair < int, int >, WLHO, WH 			> (
+			const Graph   	< std::pair < int, int > > 			&, 
+			RoutingState 	< std::pair < int, int > > 			&,
+			std::vector 	< std::mt19937 > 					& );
+
 		template double RoutingSimulator < std::pair < int, int >, POHL,  HL 		> ( 
 			const Graph   	< std::pair < int, int > > 			&, 
 			RoutingState 	< std::pair < int, int > > 			&,

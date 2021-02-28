@@ -43,6 +43,11 @@ namespace DominantPathsProtocols
 								 DomEntry < std::pair < int, int > > >  			&   ,
 			DomEntry < std::pair < int, int > >    					  				&  	);
 
+		template bool Election < std::pair < int, int >, 		WLHO 	> (		
+			std::unordered_map < int, 
+								 DomEntry < std::pair < int, int > > >  			&   ,
+			DomEntry < std::pair < int, int > >    					  				&  	);
+
 		template bool Election < std::pair < int, int >, 		POHL 	> (		
 			std::unordered_map < int, 
 								 DomEntry < std::pair < int, int > > >  			&   ,
@@ -74,6 +79,16 @@ namespace DominantPathsProtocols
 			const Advert < std::pair < int, int > > 								& 	);
 
 		template void IntermediateNode 			< std::pair < int, int >, WSO, WL 			> ( 
+			const Graph 		< std::pair < int, int > > 			& 	, 
+				RoutingState 	< std::pair < int, int > > 			& 	,
+				std::mt19937  										& 	, 
+				const double 										& 	,
+			const int 												& 	,
+			const int 												& 	,
+			const int 												& 	, 
+			const Advert < std::pair < int, int > > 				& 	);
+
+		template void IntermediateNode 			< std::pair < int, int >, WLHO, WH 			> ( 
 			const Graph 		< std::pair < int, int > > 			& 	, 
 				RoutingState 	< std::pair < int, int > > 			& 	,
 				std::mt19937  										& 	, 
@@ -135,6 +150,12 @@ namespace DominantPathsProtocols
 			std::mt19937 			   								&  	,	
 		 	const int 				   								&	);
 
+		template void DestinationAnnouncement 	< std::pair < int, int >, WLHO, WH 			> (	
+			const Graph  		< std::pair < int, int > > 			& 	, 
+		 	RoutingState  		< std::pair < int, int > > 			&  	, 
+			std::mt19937 			   								&  	,	
+		 	const int 				   								&	);
+
 		template void DestinationAnnouncement 	< std::pair < int, int >, POHL, HL 			> (	
 			const Graph  		< std::pair < int, int > > 			& 	, 
 		 	RoutingState  		< std::pair < int, int > > 			&  	, 
@@ -167,6 +188,13 @@ namespace DominantPathsProtocols
 			const int 												& 	);
 
 		template void LinkFailure 				< std::pair < int, int >, WSO, WL 			> (	
+			Graph  				< std::pair < int, int > > 			& 	, 
+		 	RoutingState  		< std::pair < int, int > > 			&  	, 
+			std::vector  		< std::mt19937 > 					&  	,	
+			const int 												& 	,
+			const int 												& 	);
+
+		template void LinkFailure 				< std::pair < int, int >, WLHO, WH 			> (	
 			Graph  				< std::pair < int, int > > 			& 	, 
 		 	RoutingState  		< std::pair < int, int > > 			&  	, 
 			std::vector  		< std::mt19937 > 					&  	,	
